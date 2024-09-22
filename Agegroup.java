@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Agegroup {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         // System.out.println("hey");
         Scanner s = new Scanner(System.in);

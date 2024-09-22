@@ -11,3 +11,4 @@ public class Student {
         System.out.println(obj1.roll_num);
     }
 }
+//class creation and object calling in main 

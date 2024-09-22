@@ -1,6 +1,7 @@
 import java.util.Scanner;
 //print 1 to n 
 public class Whileloop {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

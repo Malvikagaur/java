@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Div3 {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         int val = sc.nextInt();
 
