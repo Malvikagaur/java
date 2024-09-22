@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class MultiArr{
     void exampleArr(){
        // int[][] age = new int[4][5] declaration of multidimensional array
@@ -24,7 +26,7 @@ class MultiArr{
         int arr[] = {23, 3, 2, 5, 12, 10, 3456};
         int sum = 0;
 
-        for(int i = 0; i < arr.length; i++){
+        for(int i = 0; i < arr.length; i++){ 
             sum = sum + arr[i];
         }
         System.out.println(sum);
@@ -42,15 +44,44 @@ class MultiArr{
     }
     @SuppressWarnings("unused")
     void searchofElement(){
-        int [] arr = {12, 45, 34, 21, 1234, 1245, 3412, 4512, 4123, 3124};
+        int [] arr = {12, 45, 34, 21, 1234, 1245, 3412, 4512, 4123, 3124}; 
         int x = 1234;
         int ans = -1;
-        for(int i = 0; i < arr.length; i++){
+        for(int i = 0; i < arr.length; i++){ // here if the element to be searched is occuring more than once it will give its last position so to gets its first position or to stop the loop iterating further we will use break statement
             if(arr[i] == x){
                 ans = i;
             }  
         }
         System.out.println("element " + x + " found at index " +ans);    
+    }
+    void searchofElementcomingmultipletime(){
+        int [] arr = {12, 1234, 34, 21, 1234, 1245, 3412, 4512, 4123, 1234}; 
+        int x = 1234;
+        int ans = -1;
+        for(int i = 0; i < arr.length; i++){ // here we are using break statement
+            if(arr[i] == x){
+                ans = i;
+                break;
+            }  
+        }
+        System.out.println("element " + x + " found at index " +ans);    
+    }
+
+    void arrInput(){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter the size of array");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        
+        System.out.println("enter the " + n + " elements of array");
+        for(int i = 0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < n; i++){
+            System.out.print(arr[i]+ " ");
+        }
     }
 }
 public class ArrDemo {
@@ -59,8 +90,11 @@ public class ArrDemo {
         //obj.exampleArr();
         //obj.sumArray();
         //obj.maxofArray();
-        obj.searchofElement();
+        //obj.searchofElement();
+        //obj.searchofElementcomingmultipletime();
+        obj.arrInput();
     }
+    //the search approached used here is known as linear search
 }
 //      0  1  2
 // 0  | 45 44 43
