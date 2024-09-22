@@ -20,11 +20,46 @@ class MultiArr{
         } //this is the utility of lenth method in place of arr.lenth we could have write i<2 and j<3
     }
     }
+    void sumArray(){
+        int arr[] = {23, 3, 2, 5, 12, 10, 3456};
+        int sum = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            sum = sum + arr[i];
+        }
+        System.out.println(sum);
+    }
+    void maxofArray(){
+        int[] arr = {10, 34, 23456, 12, 56, 12339578};
+        int ans = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > ans){
+                ans = arr[i];
+            }
+        }
+        System.out.println("max element : " +ans);
+    }
+    @SuppressWarnings("unused")
+    void searchofElement(){
+        int [] arr = {12, 45, 34, 21, 1234, 1245, 3412, 4512, 4123, 3124};
+        int x = 1234;
+        int ans = -1;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == x){
+                ans = i;
+            }  
+        }
+        System.out.println("element " + x + " found at index " +ans);    
+    }
 }
 public class ArrDemo {
     public static void main(String[] args) {
         MultiArr obj = new MultiArr();
-        obj.exampleArr();
+        //obj.exampleArr();
+        //obj.sumArray();
+        //obj.maxofArray();
+        obj.searchofElement();
     }
 }
 //      0  1  2
