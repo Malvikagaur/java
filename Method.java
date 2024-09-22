@@ -7,6 +7,7 @@ class Perform {
     }
 }
 public class Method {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Perform o = new Perform();
         Scanner sc = new Scanner(System.in);
