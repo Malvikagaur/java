@@ -67,6 +67,7 @@ class MultiArr{
         System.out.println("element " + x + " found at index " +ans);    
     }
 
+    @SuppressWarnings("resource")
     void arrInput(){
         Scanner sc = new Scanner(System.in);
         
